@@ -1,27 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
-import Image from '../../assets/images/profilelg.png'
+import React from "react";
+import styled from "styled-components";
+import Image from "../../assets/images/profilelg.png";
 
 const Container = styled.div`
-    margin-top: 5rem;
-`
+  margin-top: 5rem;
+`;
 
 const ProfileImg = styled.img`
-    height: 5rem;
-`
+  height: 5rem;
+`;
 const ProfileName = styled.h1`
-    font-size: 1rem;
-    font-weight: 300;
-    color: ${({ theme }) => theme.textColor};
-`
+  font-size: 1rem;
+  font-weight: 300;
+  color: ${({ theme }) => theme.textColor};
+`;
 
 const Profile = () => {
-    return (
-        <Container>
-            <ProfileImg src={Image} />
-            <ProfileName>Scott Grant</ProfileName>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <ProfileImg src={Image} />
+      <ProfileName>Hari Irawan</ProfileName>
+    </Container>
+  );
+};
 
-export default Profile
+export default Profile;

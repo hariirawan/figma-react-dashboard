@@ -1,23 +1,32 @@
-import React from 'react'
-import MenuLink from './MenuLink'
-import styled from 'styled-components'
-
+import React from "react";
+import MenuLink from "./MenuLink";
+import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
-    margin-top: 2rem;
-    width: 100%;
-`
+  margin-top: 2rem;
+  width: 100%;
+`;
 
 const Menu = () => {
-    return (
-        <Container>
-            <MenuLink title="Home" icon={'home'}/>
-            <MenuLink title="Deposits" icon={'file-multiple'} active />
-            <MenuLink title="Offers" icon={'gift'}/>
-            <MenuLink title="Payments" icon={'bank'}/>
-            <MenuLink title="Settings" icon={'cog'} />
-        </Container>
-    )
-}
+  const history = useHistory();
 
-export default Menu
+  console.log(history);
+
+  return (
+    <Container>
+      <MenuLink title="Home" icon={"home"} url="/" />
+      <MenuLink
+        title="Deposits"
+        icon={"file-multiple"}
+        active
+        url="/deposits"
+      />
+      <MenuLink title="Offers" icon={"gift"} url="/offers" />
+      <MenuLink title="Payments" icon={"bank"} url="/payments" />
+      <MenuLink title="Settings" icon={"cog"} url="/settings" />
+    </Container>
+  );
+};
+
+export default Menu;
