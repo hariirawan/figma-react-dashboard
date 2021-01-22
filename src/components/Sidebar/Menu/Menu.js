@@ -16,12 +16,7 @@ const Menu = () => {
   return (
     <Container>
       <MenuLink title="Home" icon={"home"} url="/" />
-      <MenuLink
-        title="Deposits"
-        icon={"file-multiple"}
-        active
-        url="/deposits"
-      />
+      <MenuLink title="Deposits" icon={"file-multiple"} url="/deposits" />
       <MenuLink title="Offers" icon={"gift"} url="/offers" />
       <MenuLink title="Payments" icon={"bank"} url="/payments" />
       <MenuLink title="Settings" icon={"cog"} url="/settings" />
